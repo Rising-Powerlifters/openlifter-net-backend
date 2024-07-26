@@ -5,3 +5,4 @@ out
 *.log*
 .idea/
 .jetclient/
+state.json

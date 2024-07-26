@@ -52,7 +52,7 @@ export const meetSetupMethods: ReadonlyArray<RpcMethod> = [
   {
     name: MeetSetupMethod.SetLengthDays,
     handler: (props: { length: number }) => {
-      meetRepository.setLengthDays(length)
+      meetRepository.setLengthDays(props.length)
     }
   },
   {
