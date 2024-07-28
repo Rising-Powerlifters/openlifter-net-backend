@@ -17,10 +17,6 @@ const initialState: LiftingState = {
   // they are unset.
   overrideAttempt: null, // Allows selecting an attempt, even if it's completed.
   overrideEntryId: null, // Allows selecting a lifter, even if they've already gone.
-
-  // Presentational configuration.
-  // TODO remove from shared state?
-  columnDivisionWidthPx: 90
 }
 
 export default {
@@ -41,6 +37,7 @@ export default {
       overrideAttempt: null,
       overrideEntryId: null
     }
+    stateManager.saveLiftingState(newLiftingState)
   },
   overrideAttempt: (attempt: number) => {
     const state = stateManager.get().lifting
